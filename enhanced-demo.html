@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio 2.0 - Enhanced Features Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .hero-section {
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #00d4ff, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: #b0b0b0;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .feature-card:hover::before {
+            left: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .feature-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #00d4ff;
+        }
+        
+        .feature-description {
+            line-height: 1.6;
+            color: #b0b0b0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tech-tag {
+            background: linear-gradient(45deg, #00d4ff, #0099cc);
+            color: #000;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin: 4rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            margin: 0 1rem;
+            background: linear-gradient(45deg, #00d4ff, #0099cc);
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 212, 255, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #00d4ff;
+            border: 2px solid #00d4ff;
+        }
+        
+        .btn-secondary:hover {
+            background: #00d4ff;
+            color: #000;
+        }
+        
+        .animation-demo {
+            margin: 4rem 0;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        .demo-shape {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #00d4ff, #ff6b6b);
+            border-radius: 50%;
+            margin: 2rem auto;
+            animation: morph 4s ease-in-out infinite;
+        }
+        
+        @keyframes morph {
+            0%, 100% { 
+                border-radius: 50%; 
+                transform: rotate(0deg) scale(1);
+            }
+            25% { 
+                border-radius: 20%; 
+                transform: rotate(90deg) scale(1.1);
+            }
+            50% { 
+                border-radius: 0%; 
+                transform: rotate(180deg) scale(0.9);
+            }
+            75% { 
+                border-radius: 20%; 
+                transform: rotate(270deg) scale(1.1);
+            }
+        }
+        
+        .scroll-indicator {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 212, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .scroll-indicator:hover {
+            background: rgba(0, 212, 255, 0.4);
+            transform: scale(1.1);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .scroll-indicator::after {
+            content: '↑';
+            font-size: 1.5rem;
+            color: #00d4ff;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .btn {
+                display: block;
+                margin: 1rem auto;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero-section">
+            <h1 class="hero-title">🚀 Portfolio 2.0 Enhanced</h1>
+            <p class="hero-subtitle">Experience the future of web portfolios with advanced GSAP animations</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🎭</span>
+                <h3 class="feature-title">Advanced GSAP Animations</h3>
+                <p class="feature-description">
+                    Professional-grade animations with 3D transforms, morphing effects, and smooth transitions. 
+                    Inspired by the best open-source GSAP examples with custom easing functions.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">GSAP 3.12.2</span>
+                    <span class="tech-tag">ScrollTrigger</span>
+                    <span class="tech-tag">3D Transforms</span>
+                    <span class="tech-tag">Custom Easing</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🌊</span>
+                <h3 class="feature-title">Horizontal Scroll Magic</h3>
+                <p class="feature-description">
+                    Smooth horizontal scrolling for projects with pinning, scrubbing, and dynamic width calculations. 
+                    Perfect for showcasing portfolios in a modern, engaging way.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Horizontal Scroll</span>
+                    <span class="tech-tag">Pin & Scrub</span>
+                    <span class="tech-tag">Dynamic Width</span>
+                    <span class="tech-tag">Smooth Transitions</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">⚡</span>
+                <h3 class="feature-title">Backward Animations</h3>
+                <p class="feature-description">
+                    Reverse animations that play when scrolling back up, creating a seamless bidirectional experience. 
+                    Every element has smooth enter and exit animations.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Reverse Animations</span>
+                    <span class="tech-tag">Bidirectional</span>
+                    <span class="tech-tag">Toggle Actions</span>
+                    <span class="tech-tag">Smooth Reversals</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🎨</span>
+                <h3 class="feature-title">Modern Black Theme</h3>
+                <p class="feature-description">
+                    Sleek dark theme with gradient accents, glassmorphism effects, and perfect contrast ratios. 
+                    Removed photos for a cleaner, more professional look.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Dark Theme</span>
+                    <span class="tech-tag">Glassmorphism</span>
+                    <span class="tech-tag">Gradient Accents</span>
+                    <span class="tech-tag">High Contrast</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🔮</span>
+                <h3 class="feature-title">Magnetic Interactions</h3>
+                <p class="feature-description">
+                    Buttons and elements that respond to mouse movement with magnetic effects, creating an 
+                    interactive and engaging user experience.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Magnetic Effects</span>
+                    <span class="tech-tag">Mouse Tracking</span>
+                    <span class="tech-tag">Interactive UI</span>
+                    <span class="tech-tag">Elastic Animations</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🎯</span>
+                <h3 class="feature-title">Performance Optimized</h3>
+                <p class="feature-description">
+                    Debounced scroll events, intersection observers, and optimized animations ensure smooth 
+                    performance across all devices and browsers.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Debounced Events</span>
+                    <span class="tech-tag">Intersection Observer</span>
+                    <span class="tech-tag">60fps Animations</span>
+                    <span class="tech-tag">Memory Efficient</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="animation-demo">
+            <h3 style="margin-bottom: 2rem; color: #00d4ff;">Live Animation Demo</h3>
+            <div class="demo-shape"></div>
+            <p style="color: #b0b0b0; margin-top: 1rem;">Watch the shape morph and transform in real-time</p>
+        </div>
+        
+        <div class="cta-section">
+            <h2 style="margin-bottom: 2rem; color: #ffffff;">Ready to Experience the Magic?</h2>
+            <a href="index.html" class="btn">View Live Portfolio</a>
+            <a href="README.md" class="btn btn-secondary">Read Documentation</a>
+        </div>
+    </div>
+    
+    <div class="scroll-indicator" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"></div>
+    
+    <script>
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate cards on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.feature-card').forEach(card => {
+                observer.observe(card);
+            });
+            
+            // Add hover effects to buttons
+            document.querySelectorAll('.btn').forEach(btn => {
+                btn.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px) scale(1.05)';
+                });
+                
+                btn.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

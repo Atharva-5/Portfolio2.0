@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio 2.0 - Feature Demo</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #fff, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .feature-description {
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        .cta-buttons {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            margin: 0 1rem;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .tech-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Portfolio 2.0 - Modern Features</h1>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎭</div>
+                <div class="feature-title">GSAP Animations</div>
+                <div class="feature-description">
+                    Professional-grade animations using GSAP with scroll-triggered effects, 
+                    smooth transitions, and particle systems for an engaging user experience.
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">GSAP 3.12.2</span>
+                    <span class="tech-tag">ScrollTrigger</span>
+                    <span class="tech-tag">TextPlugin</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎠</div>
+                <div class="feature-title">Swiper.js Carousel</div>
+                <div class="feature-description">
+                    Modern touch-enabled carousel for project showcase with smooth 
+                    transitions, autoplay, and responsive breakpoints.
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Swiper.js 11</span>
+                    <span class="tech-tag">Touch Support</span>
+                    <span class="tech-tag">Responsive</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-title">Modern UI/UX</div>
+                <div class="feature-description">
+                    Glassmorphism effects, gradient backgrounds, and modern design 
+                    principles for a contemporary and professional look.
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">CSS Grid</span>
+                    <span class="tech-tag">Flexbox</span>
+                    <span class="tech-tag">Custom Properties</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <div class="feature-title">Mobile-First</div>
+                <div class="feature-description">
+                    Fully responsive design optimized for all devices with touch-friendly 
+                    navigation and mobile-optimized animations.
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Responsive Design</span>
+                    <span class="tech-tag">Touch Events</span>
+                    <span class="tech-tag">Mobile UX</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Performance Optimized</div>
+                <div class="feature-description">
+                    Debounced scroll events, intersection observers, and optimized 
+                    animations for smooth performance across all devices.
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Debouncing</span>
+                    <span class="tech-tag">Intersection Observer</span>
+                    <span class="tech-tag">Lazy Loading</span>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <div class="feature-title">Easy Customization</div>
+                <div class="feature-description">
+                    Well-documented code with CSS custom properties and modular 
+                    JavaScript for easy customization and maintenance.
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">CSS Variables</span>
+                    <span class="tech-tag">Modular JS</span>
+                    <span class="tech-tag">Documentation</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="index.html" class="btn">View Live Portfolio</a>
+            <a href="README.md" class="btn">Read Documentation</a>
+        </div>
+    </div>
+
+    <script>
+        // Simple demo animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.feature-card');
+            
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
