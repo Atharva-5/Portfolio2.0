@@ -24,6 +24,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
   <!-- Framer Motion CDN -->
   <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
 
@@ -145,123 +147,67 @@
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="skills">
+  <section id="skills" class="skills-section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Skills & Technologies</h2>
-        <p class="section-subtitle">Technologies I work with</p>
+        <h2 class="section-title">Technologies & Tools</h2>
+        <p class="section-subtitle">A stack I love working with</p>
       </div>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3>Frontend</h3>
-          <div class="skill-items">
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
-              </div>
-              <span class="skill-name">HTML5</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="90"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
-              </div>
-              <span class="skill-name">CSS3</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="95"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                  alt="JavaScript">
-              </div>
-              <span class="skill-name">JavaScript</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="85"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
-              </div>
-              <span class="skill-name">React</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="80"></div>
-              </div>
-            </div>
+
+      <div class="skills-showcase">
+        <!-- Frontend -->
+        <div class="skill-group">
+          <h3 class="skill-group-title">Frontend</h3>
+          <div class="skill-icons">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
+              title="HTML5">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
+              title="CSS3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript" title="JavaScript">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
+              title="React">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+              alt="Bootstrap" title="Bootstrap">
           </div>
         </div>
-        <div class="skill-category">
-          <h3>Backend</h3>
-          <div class="skill-items">
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
-              </div>
-              <span class="skill-name">Java</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="90"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                  alt="PostgreSQL">
-              </div>
-              <span class="skill-name">PostgreSQL</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="75"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
-              </div>
-              <span class="skill-name">C</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="80"></div>
-              </div>
-            </div>
+
+        <!-- Backend -->
+        <div class="skill-group">
+          <h3 class="skill-group-title">Backend</h3>
+          <div class="skill-icons">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
+              title="Java">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot"
+              title="Spring Boot">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+              alt="PostgreSQL" title="PostgreSQL">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
+              title="MySQL">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+              title="Node.js">
           </div>
         </div>
-        <div class="skill-category">
-          <h3>Tools & Others</h3>
-          <div class="skill-items">
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
-              </div>
-              <span class="skill-name">Git</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="85"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
-              </div>
-              <span class="skill-name">Linux</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="70"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS">
-              </div>
-              <span class="skill-name">AWS</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="65"></div>
-              </div>
-            </div>
+
+        <!-- Cloud & Tools -->
+        <div class="skill-group">
+          <h3 class="skill-group-title">Cloud & Tools</h3>
+          <div class="skill-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS"
+              title="AWS">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+              title="GitHub">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"
+              title="Linux">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"
+              title="Docker">
           </div>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- Projects Section -->
   <section id="projects" class="projects">
