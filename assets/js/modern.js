@@ -360,7 +360,7 @@ function initializeHorizontalScroll() {
                         y: targetSection,
                         offsetY: navbar.offsetHeight, // automatically handle navbar height
                     },
-                    duration: 0,
+                    duration: 1,
                     ease: 'power2.out'
                 });
             });
