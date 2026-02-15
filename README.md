@@ -1,12 +1,8 @@
 <div align="center">
   
-  # 🌑 STARK PORTFOLIO v2.0
-  
   **Atharva Joshi | Software Engineer**
   
   *A minimalist, high-performance portfolio engineered for the modern web.*
-  
-  [Live Demo](#) • [Report Bug](https://github.com/Atharva-5/Portfolio2.0/issues) • [Request Feature](https://github.com/Atharva-5/Portfolio2.0/issues)
 
 </div>
 
