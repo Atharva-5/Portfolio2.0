@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Atharva Joshi - Modern Portfolio</title>
+  <meta name="description" content="Atharva Joshi - Full Stack Developer & IT Student">
+  <meta name="keywords" content="Web Developer, Java Developer, React, Portfolio">
+
+  <!-- Favicons -->
+  <link href="../assets/img/WebsiteLogo.png" rel="icon">
+  <link href="../assets/img/WebsiteLogo.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+  <!-- Framer Motion CDN -->
+  <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="assets/css/modern.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">Atharva Joshi</span>
+        <span class="logo-subtitle">Developer</span>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#awards" class="nav-link">Awards</a>
+        <a href="#research" class="nav-link">Research</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-toggle" id="nav-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-background">
+      <div class="particles" id="particles"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="greeting">Hello, I'm</span>
+          <span class="name">Atharva Joshi</span>
+          <span class="role">Full Stack Developer</span>
+        </h1>
+        <p class="hero-description">
+          Passionate about creating innovative web solutions and exploring cutting-edge technologies.
+          Currently pursuing BTech in Information Technology with a focus on full-stack development.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="animated-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+          <div class="floating-elements">
+            <div class="floating-icon java">Java</div>
+            <div class="floating-icon react">React</div>
+            <div class="floating-icon js">JavaScript</div>
+            <div class="floating-icon css">CSS</div>
+            <div class="floating-icon node">Node.js</div>
+            <div class="floating-icon python">Python</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Get to know me better</p>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <h3>Hello! I'm Atharva Joshi</h3>
+          <p>
+            A tech enthusiast and lifelong learner at Walchand Institute of Technology.
+            I'm always on the lookout for ways to level up my skills, whether it's through
+            hands-on projects, new challenges, or exciting learning experiences.
+          </p>
+          <p>
+            My expertise lies in Java Development, Web Development & Web Content Management,
+            where I've not only upgraded my skills but also earned recognition and awards.
+            I have a deep passion for Full Stack Development, constantly exploring new
+            technologies to stay ahead of the curve.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">150+</span>
+              <span class="stat-label">DSA Problems Solved</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2</span>
+              <span class="stat-label">National Awards</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Technologies & Tools</h2>
+        <p class="section-subtitle">A stack I love working with</p>
+      </div>
+
+      <div class="skills-showcase">
+        <!-- Frontend -->
+        <div class="skill-group">
+          <h3 class="skill-group-title">Frontend</h3>
+          <div class="skill-icons">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
+              title="HTML5">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
+              title="CSS3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript" title="JavaScript">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
+              title="React">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+              alt="Bootstrap" title="Bootstrap">
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-group">
+          <h3 class="skill-group-title">Backend</h3>
+          <div class="skill-icons">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
+              title="Java">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot"
+              title="Spring Boot">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+              alt="PostgreSQL" title="PostgreSQL">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
+              title="MySQL">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+              title="Node.js">
+          </div>
+        </div>
+
+        <!-- Cloud & Tools -->
+        <div class="skill-group">
+          <h3 class="skill-group-title">Cloud & Tools</h3>
+          <div class="skill-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS"
+              title="AWS">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+              title="GitHub">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"
+              title="Linux">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"
+              title="Docker">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Scroll down to see projects move horizontally</p>
+      </div>
+
+      <!-- Horizontal Scroll Container -->
+      <div class="projects-scroll-wrapper">
+        <div class="projects-scroll-container" id="projectsScroll">
+
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/VivahBandh.png" alt="VivahBandh">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/Atharva-5/Major-Project" target="_blank">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a href="assets/images/VivahBandh.png" data-lightbox="project">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>VivahBandh</h3>
+              <p>A matchmaking platform for specific communities and connection requests.</p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/TechTrek.png" alt="TechTrek">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/Atharva-5/TechTrek" target="_blank">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a href="assets/images/TechTrek.png" data-lightbox="project">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>TechTrek</h3>
+              <p>Web portal empowering engineering aspirants through resources and insights.</p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/MoviesVerse.png" alt="MoviesVerse">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://moviesverse-a.netlify.app/" target="_blank">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                  <a href="assets/images/MoviesVerse.png" data-lightbox="project">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>MoviesVerse</h3>
+              <p>Interactive React app displaying 5000+ movies from the OMDb API with dynamic filters.</p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">API</span>
+                <span class="tech-tag">Netlify</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/TaskManagement.png" alt="Task Management System">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/Atharva-5/TaskManagementApp" target="_blank">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a href="assets/images/TaskManagement.png" data-lightbox="project">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Task Management System</h3>
+              <p>Full-stack task management app with Django backend and React frontend.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/ImageGen.png" alt="Image Search Engine">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://imagesearchengine-a.netlify.app/" target="_blank">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                  <a href="assets/images/ImageGen.png" data-lightbox="project">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Image Search Engine</h3>
+              <p>Image discovery platform built using the Unsplash API with smooth UX animations.</p>
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">API</span>
+                <span class="tech-tag">Unsplash</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/RandomQuote.png" alt="Random Quote Generator">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://randomquotegenerator-a.netlify.app/" target="_blank">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                  <a href="assets/images/RandomQuote.png" data-lightbox="project">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Random Quote Generator</h3>
+              <p>React-based web app fetching and displaying random quotes using a public API.</p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">API</span>
+                <span class="tech-tag">Netlify</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards Section -->
+  <section id="awards" class="awards">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">🏆 Awards & Achievements</h2>
+        <p class="section-subtitle">Recognition for excellence and innovation</p>
+      </div>
+
+      <div class="awards-grid">
+        <div class="award-card">
+          <div class="award-icon">🥇</div>
+          <div class="award-content">
+            <h3>Paper Presentation Winner</h3>
+            <p class="award-event">Kshitij National Level Symposium</p>
+            <p class="award-description">1st Prize for innovative research presentation</p>
+            <span class="award-year">2024</span>
+          </div>
+        </div>
+
+        <div class="award-card">
+          <div class="award-icon">🥇</div>
+          <div class="award-content">
+            <h3>Paper Presentation Winner</h3>
+            <p class="award-event">WisoTech National Level Symposium</p>
+            <p class="award-description">1st Prize for technical paper presentation</p>
+            <span class="award-year">2024</span>
+          </div>
+        </div>
+
+        <div class="award-card">
+          <div class="award-icon">🥇</div>
+          <div class="award-content">
+            <h3>Project Exhibition Winner</h3>
+            <p class="award-event">WisoTech National Level Symposium</p>
+            <p class="award-description">1st Prize for innovative project showcase</p>
+            <span class="award-year">2024</span>
+          </div>
+        </div>
+
+        <div class="award-card">
+          <div class="award-icon">🥈</div>
+          <div class="award-content">
+            <h3>Project Exhibition Runner-up</h3>
+            <p class="award-event">WisoTech National Level Symposium</p>
+            <p class="award-description">2nd Prize for outstanding project demonstration</p>
+            <span class="award-year">2024</span>
+          </div>
+        </div>
+
+        <div class="award-card">
+          <div class="award-icon">📌</div>
+          <div class="award-content">
+            <h3>Event Coordinator</h3>
+            <p class="award-event">WITchar 2K24</p>
+            <p class="award-description">Successfully managed 20+ project submissions</p>
+            <span class="award-year">2024</span>
+          </div>
+        </div>
+
+        <div class="award-card">
+          <div class="award-icon">💡</div>
+          <div class="award-content">
+            <h3>DSA Problem Solver</h3>
+            <p class="award-event">Competitive Programming</p>
+            <p class="award-description">Solved 150+ Data Structures & Algorithms problems</p>
+            <span class="award-year">2023-2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Papers Section -->
+  <section id="research" class="research">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">📚 Research Papers</h2>
+        <p class="section-subtitle">Academic contributions and publications</p>
+      </div>
+
+      <div class="research-grid">
+        <!-- Card 1 -->
+        <div class="research-card">
+          <div class="research-image">
+            <img src="assets/images/TechTrekPaper.png" alt="TechTrek Research Paper">
+            <div class="research-overlay">
+              <a href="../assets/pdf/TechTrek.pdf" target="_blank" class="research-link">
+                <i class="bi bi-file-earmark-pdf"></i> View PDF
+              </a>
+            </div>
+          </div>
+          <div class="research-content">
+            <h3>TechTrek: Web Portal for Empowering Engineering Aspirants</h3>
+            <p class="research-abstract">
+              A comprehensive study on developing an educational web portal that provides guidance and resources
+              for engineering aspirants, featuring interactive tools and personalized learning paths.
+            </p>
+            <div class="research-meta">
+              <span class="research-type">Research Paper</span>
+              <span class="research-year">2024</span>
+            </div>
+            <div class="research-tech">
+              <span class="tech-tag">Web Development</span>
+              <span class="tech-tag">Educational Technology</span>
+              <span class="tech-tag">User Experience</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="research-card">
+          <div class="research-image">
+            <img src="assets/images/ChatbotPaper.png" alt="AI Chatbot Research Paper">
+            <div class="research-overlay">
+              <a href="../assets/pdf/AI Chatbot.pdf" target="_blank" class="research-link">
+                <i class="bi bi-file-earmark-pdf"></i> View PDF
+              </a>
+            </div>
+          </div>
+          <div class="research-content">
+            <h3>AI-Powered Chatbot: Enhancing User Interaction and Efficiency</h3>
+            <p class="research-abstract">
+              An in-depth analysis of AI-powered chatbot systems, exploring their impact on user interaction
+              patterns and operational efficiency in modern applications.
+            </p>
+            <div class="research-meta">
+              <span class="research-type">Research Paper</span>
+              <span class="research-year">2024</span>
+            </div>
+            <div class="research-tech">
+              <span class="tech-tag">Artificial Intelligence</span>
+              <span class="tech-tag">Natural Language Processing</span>
+              <span class="tech-tag">User Interface</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">📞 Get In Touch</h2>
+        <p class="section-subtitle">Let's work together</p>
+      </div>
+
+      <div class="contact-content">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="bi bi-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Email</h3>
+              <p>atharvajoshi0573@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="bi bi-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Phone</h3>
+              <p>+91 8484079098</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Location</h3>
+              <p>Pune, Maharashtra</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Social Links -->
+      <div class="social-links">
+        <a href="https://linkedin.com/in/contactatharvajoshi" target="_blank" class="social-link">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://github.com/Atharva-5" target="_blank" class="social-link">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="../assets/pdf/Atharva Joshi Resume.pdf" target="_blank" class="social-link">
+          <i class="bi bi-file-earmark-pdf"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Atharva Joshi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Lightbox2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="assets/js/modern.js"></script>
+</body>
+
+</html>
