@@ -6,8 +6,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const papers = [
-    { title: "TechTrek: Web Portal for Empowering Engineering Aspirants", journal: "International Journal of Education", year: "2024" },
-    { title: "AI-Powered Chatbot: Enhancing User Interaction and Efficiency", journal: "ResearchGate Publications", year: "2024" }
+    { title: "TechTrek: Web Portal for Empowering Engineering Aspirants", journal: "International Journal of Scientific Research and Technology", year: "2024" },
+    { title: "AI-Powered Chatbot: Enhancing User Interaction and Efficiency", journal: "", year: "2024" }
 ];
 
 const Research = () => {

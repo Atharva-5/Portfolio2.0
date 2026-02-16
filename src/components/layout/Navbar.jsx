@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
+import { getLenis } from "../../hooks/useLenis";
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -12,6 +13,23 @@ const Navbar = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    const handleNavLinkClick = (e, targetId) => {
+        e.preventDefault();
+        const lenis = getLenis();
+        if (lenis) {
+            lenis.scrollTo(targetId, {
+                duration: 1.5,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+            });
+        } else {
+            const target = document.querySelector(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+        closeMenu();
+    };
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -35,20 +53,23 @@ const Navbar = () => {
                 </button>
 
                 <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-                    <a href="#home" onClick={closeMenu}>Home</a>
-                    <a href="#about" onClick={closeMenu}>About</a>
-                    <a href="#projects" onClick={closeMenu}>Works</a>
-                    <a href="#contact" onClick={closeMenu}>Contact</a>
+                    <a href="#home" onClick={(e) => handleNavLinkClick(e, "#home")}>Home</a>
+                    <a href="#about" onClick={(e) => handleNavLinkClick(e, "#about")}>About</a>
+                    <a href="#experience" onClick={(e) => handleNavLinkClick(e, "#experience")}>Journey</a>
+                    <a href="#projects" onClick={(e) => handleNavLinkClick(e, "#projects")}>Works</a>
+                    <a href="#contact" onClick={(e) => handleNavLinkClick(e, "#contact")}>Contact</a>
                 </div>
             </div>
 
             {/* Mobile Overlay Menu */}
             <div className={`mobile-nav-overlay ${menuOpen ? "active" : ""}`}>
+                <button className="mobile-nav-close" onClick={closeMenu}>CLOSE</button>
                 <div className="mobile-links">
-                    <a href="#home" onClick={closeMenu}>Home</a>
-                    <a href="#about" onClick={closeMenu}>About</a>
-                    <a href="#projects" onClick={closeMenu}>Works</a>
-                    <a href="#contact" onClick={closeMenu}>Contact</a>
+                    <a href="#home" onClick={(e) => handleNavLinkClick(e, "#home")}>Home</a>
+                    <a href="#about" onClick={(e) => handleNavLinkClick(e, "#about")}>About</a>
+                    <a href="#experience" onClick={(e) => handleNavLinkClick(e, "#experience")}>Journey</a>
+                    <a href="#projects" onClick={(e) => handleNavLinkClick(e, "#projects")}>Works</a>
+                    <a href="#contact" onClick={(e) => handleNavLinkClick(e, "#contact")}>Contact</a>
                 </div>
             </div>
         </nav>

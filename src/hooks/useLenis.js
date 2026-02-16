@@ -3,17 +3,23 @@ import Lenis from "lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+let lenisInstance = null;
+
+export const getLenis = () => lenisInstance;
+
 export default function useLenis() {
     useEffect(() => {
         const lenis = new Lenis({
-            duration: 1.8, // Slightly longer for weighted feel
+            duration: 1.8,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             smoothWheel: true,
-            wheelMultiplier: 1.1, // Controlled speed
+            wheelMultiplier: 1.1,
             smoothTouch: true,
             touchMultiplier: 1.5,
             infinite: false,
         });
+
+        lenisInstance = lenis;
 
         const updateLenis = (time) => {
             lenis.raf(time * 1000);
@@ -27,6 +33,7 @@ export default function useLenis() {
 
         return () => {
             lenis.destroy();
+            lenisInstance = null;
             gsap.ticker.remove(updateLenis);
         };
     }, []);
