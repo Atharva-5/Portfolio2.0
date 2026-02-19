@@ -50,7 +50,7 @@ const About = () => {
                     <div className="mission-content">
                         <h3 className="mission-line mission-line-h3">DESIGNING</h3>
                         <h3 className="mission-line mission-line-h3">STABILITY INTO</h3>
-                        <h3 className="mission-line mission-line-h3" style={{ color: "transparent", WebkitTextStroke: "1px white" }}>THE CHAOS.</h3>
+                        <h3 className="mission-line mission-line-h3" style={{ color: "transparent", WebkitTextStroke: "1px var(--text-main)" }}>THE CHAOS.</h3>
                     </div>
                 </div>
 

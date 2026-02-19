@@ -5,9 +5,23 @@
   --text-main: #f5f5f5;
   --text-dim: #707070;
   --accent: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.03);
+  --nav-border: rgba(255, 255, 255, 0.05);
+  --card-bg: rgba(255, 255, 255, 0.05);
   --font-display: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   --font-serif: 'Playfair Display', serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-theme {
+  --bg-color: #f3f7fd;
+  --text-main: #080808;
+  --text-dim: #505050;
+  --accent: #000000;
+  --nav-bg: rgba(0, 0, 0, 0.03);
+  --nav-border: rgba(0, 0, 0, 0.05);
+  --card-bg: rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -52,10 +66,10 @@ body::after {
 }
 
 .nav-pill {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--nav-bg);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--nav-border);
   padding: 0.75rem 2.5rem;
   border-radius: 100px;
   display: flex;
@@ -77,7 +91,7 @@ body::after {
 .toggle-line {
   width: 20px;
   height: 2px;
-  background: white;
+  background: var(--text-main);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -112,7 +126,7 @@ body::after {
   right: 2rem;
   background: none;
   border: none;
-  color: white;
+  color: var(--text-main);
   font-size: 1rem;
   font-family: var(--font-mono);
   cursor: pointer;
@@ -142,7 +156,7 @@ body::after {
   font-size: 2.5rem;
   font-weight: 800;
   text-decoration: none;
-  color: white;
+  color: var(--text-main);
   text-transform: uppercase;
   letter-spacing: -0.02em;
   opacity: 0;
@@ -172,7 +186,7 @@ body::after {
 }
 
 .navbar-v5.scrolled .nav-pill {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--nav-bg);
 }
 
 .nav-logo {
@@ -189,7 +203,7 @@ body::after {
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: var(--text-main);
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -290,9 +304,9 @@ body::after {
   font-size: 0.7rem;
   letter-spacing: 0.15em;
   text-decoration: none;
-  color: white;
+  color: var(--text-main);
   padding: 1rem 2.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--nav-border);
   position: relative;
   overflow: hidden;
   transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -307,14 +321,14 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: white;
+  background: var(--text-main);
   transform: translateY(101%);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: -1;
 }
 
 .hero-cta .cta-link:hover {
-  color: black;
+  color: var(--bg-color);
 }
 
 .hero-cta .cta-link:hover::before {
@@ -334,13 +348,13 @@ body::after {
 .hint-line {
   width: 1px;
   height: 60px;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--nav-border);
 }
 
 /* Cinematic Vertical Projects v6 */
 .projects-v6 {
   padding: 20vh 0;
-  background: #080808;
+  background: var(--bg-color);
 }
 
 .projects-v6-header {
@@ -352,7 +366,7 @@ body::after {
   font-weight: 900;
   letter-spacing: -0.05em;
   color: transparent;
-  -webkit-text-stroke: 3px rgba(255, 255, 255, 0.2);
+  -webkit-text-stroke: 3px var(--nav-border);
 }
 
 @media (max-width: 768px) {
@@ -442,7 +456,7 @@ body::after {
 .project-v6-stack span {
   font-family: var(--font-mono);
   font-size: 0.65rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--nav-border);
   padding: 0.5rem 1rem;
   text-transform: uppercase;
 }
@@ -463,16 +477,15 @@ body::after {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  color: white;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 0.75rem 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+  background: var(--nav-bg);
+  border: 1px solid var(--nav-border);
   width: fit-content;
 }
 
 .project-v6-link:hover {
-  background: white;
-  color: black;
+  background: var(--text-main);
+  color: var(--bg-color);
   transform: translateY(-5px);
 }
 
@@ -558,7 +571,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--nav-border);
 }
 
 .stat-item {
@@ -642,7 +655,7 @@ section {
   font-size: 6vw;
   font-weight: 800;
   text-decoration: none;
-  color: white;
+  color: var(--text-main);
   display: block;
   line-height: 0.9;
   letter-spacing: -0.04em;
@@ -655,7 +668,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 10rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--nav-border);
   padding-top: 4rem;
 }
 
@@ -668,7 +681,7 @@ section {
 
 .footer-link-entry a,
 .footer-link-entry p {
-  color: white;
+  color: var(--text-main);
   text-decoration: none;
   display: block;
   font-size: 1.1rem;
@@ -722,7 +735,7 @@ section {
 }
 
 .exp-card {
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid var(--nav-border);
   padding-left: 4rem;
   position: relative;
 }
@@ -734,7 +747,7 @@ section {
   transform: translateX(-50%);
   width: 12px;
   height: 12px;
-  background: white;
+  background: var(--text-main);
   border-radius: 50%;
 }
 
@@ -812,9 +825,9 @@ section {
 .tech-tag {
   font-family: var(--font-mono);
   font-size: 0.65rem;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--nav-border);
   padding: 0.5rem 1.2rem;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--nav-bg);
   color: var(--text-main);
   text-transform: uppercase;
 }
@@ -942,7 +955,7 @@ section {
   }
 
   .hero-title {
-    font-size: 25vw;
+    font-size: 20vw;
   }
 
   .project-v6-content h3 {
@@ -953,7 +966,7 @@ section {
 /* Recognition & Inquiry Sections */
 .item-entry,
 .research-entry {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--nav-border);
   padding: 3rem 0;
   display: flex;
   justify-content: space-between;
@@ -1056,7 +1069,7 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--nav-border);
 }
 
 .skill-group-v4 {
@@ -1081,7 +1094,7 @@ section {
   font-weight: 700;
   margin-bottom: 1rem;
   letter-spacing: -0.04em;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-dim);
   transition: color 0.3s ease;
 }
 

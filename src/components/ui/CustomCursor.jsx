@@ -46,7 +46,7 @@ const CustomCursor = () => {
                     left: 0,
                     width: "15px",
                     height: "15px",
-                    backgroundColor: "white",
+                    backgroundColor: "var(--text-main)",
                     borderRadius: "50%",
                     pointerEvents: "none",
                     zIndex: 9999,

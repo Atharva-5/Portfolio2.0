@@ -6,9 +6,10 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const awards = [
-    { title: "National Level Web Designing", organization: "Inter-College Symposium", year: "2024" },
+    { title: "Project Exhibition Winner", organization: "Kshitij National Symposium", year: "2024" },
     { title: "Paper Presentation Winner", organization: "Kshitij National Symposium", year: "2024" },
-    { title: "Project Exhibition Winner", organization: "WisoTech National Symposium", year: "2024" }
+    { title: "Project Exhibition Winner", organization: "WisoTech National Symposium", year: "2024" },
+    { title: "Paper Presentation Winner", organization: "WisoTech National Symposium", year: "2024" }
 ];
 
 const Awards = () => {

@@ -54,10 +54,10 @@ const Skills = () => {
             // Hover interaction for items
             listItems.forEach(item => {
                 item.addEventListener("mouseenter", () => {
-                    gsap.to(item, { x: 20, color: "white", duration: 0.3 });
+                    gsap.to(item, { x: 20, color: "var(--text-main)", duration: 0.3 });
                 });
                 item.addEventListener("mouseleave", () => {
-                    gsap.to(item, { x: 0, color: "rgba(255,255,255,0.8)", duration: 0.3 });
+                    gsap.to(item, { x: 0, color: "var(--text-dim)", duration: 0.3 });
                 });
             });
         });
